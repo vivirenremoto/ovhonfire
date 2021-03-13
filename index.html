@@ -43,6 +43,15 @@
 
 
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDEEE3BFDS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RDEEE3BFDS');
+    </script>
 
 
     <style>
@@ -124,6 +133,11 @@
 
         .enemy {
             background-image: url('static/enemy6.jpg');
+            z-index: 2;
+        }
+
+        .rock {
+            background-image: url('static/rock.png');
             z-index: 2;
         }
 
@@ -242,69 +256,6 @@
 
 
 
-    <div id="credits"
-        style="overflow-y:scroll;padding:20px;font-size:35px;text-align:center;color:white;position:fixed;left:0;right:0;top:0;bottom:0;display:none;background:black;">
-
-
-        <span style="color:#00ff00;font-size:50px;">CRÉDITOS</span>
-
-
-        <br><br>
-
-
-        <a style="background-image:url('static/characters/chuiso.png');" href="https://chuiso.com" target="_blank"
-            class="button">Álvaro Saez (Chuiso)</a>
-        <a style="background-image:url('static/characters/alex_navarro.jpg');" href="https://vivirdelared.com"
-            target="_blank" class="button">Alex Navarro</a>
-        <a style="background-image:url('static/characters/alvaro_peña.jpg');" href="https://growwer.com/"
-            target="_blank" class="button">Álvaro Peña</a>
-        <a style="background-image:url('static/characters/carlos_ortega.jpg');" href="https://carlosortega.page"
-            target="_blank" class="button">Carlos Ortega</a>
-        <a style="background-image:url('static/characters/christian_gallegos.jpg');" href="https://posonty.es"
-            target="_blank" class="button">Christian Gallegos</a>
-        <a style="background-image:url('static/characters/david_cuesta.jpg');" href="https://davidcuesta.es"
-            target="_blank" class="button">David Cuesta</a>
-        <a style="background-image:url('static/characters/david_moral.jpg');" href="https://alaronastudio.com"
-            target="_blank" class="button">David Moral</a>
-        <a style="background-image:url('static/characters/emilio_garcia.jpg');" href="https://campamentoweb.com"
-            target="_blank" class="button">Emilio García</a>
-        <a style="background-image:url('static/characters/estela_franco.jpg');" href="https://estelafranco.com"
-            target="_blank" class="button">Estela Franco</a>
-        <a style="background-image:url('static/characters/eva_olivares.jpg');" href="https://dobleseo.pro"
-            target="_blank" class="button">Eva Olivares</a>
-        <a style="background-image:url('static/characters/jordi_ordoñez.jpg');" href="https://jordiob.com"
-            target="_blank" class="button">Jordi Ordoñez</a>
-        <a style="background-image:url('static/characters/josma.jpg');" href="https://jos.ma" target="_blank"
-            class="button">Josma</a>
-        <a style="background-image:url('static/characters/lucia_y_el_seo.jpg');" href="https://luciayelseo.com"
-            target="_blank" class="button">Lucia y el SEO</a>
-        <a style="background-image:url('static/characters/luis_villanueva.jpg');" href="https://luismvillanueva.com/"
-            target="_blank" class="button">Luis Villanueva</a>
-        <a style="background-image:url('static/characters/marc_cruells.jpg');" href="https://twitter.com/Marc__Cruells"
-            target="_blank" class="button">Marc Cruells</a>
-        <a style="background-image:url('static/characters/marta_arroyo.jpg');" href="https://twitter.com/MartAttack22"
-            target="_blank" class="button">Marta Arroyo</a>
-        <a style="background-image:url('static/characters/mj_cachon.jpg');" href="https://mjcachon.com" target="_blank"
-            class="button">MJ Cachón</a>
-        <a style="background-image:url('static/characters/noelia_regalado.jpg');" href="https://seoforceagency.com"
-            target="_blank" class="button">Noelia Regalado</a>
-        <a style="background-image:url('static/characters/pedroseo.jpg');" href="https://pedro-seo.com" target="_blank"
-            class="button">PedroSEO</a>
-        <a style="background-image:url('static/characters/ruben_alonso.jpg');" href="https://miposicionamientoweb.es"
-            target="_blank" class="button">Ruben Alonso</a>
-        <a style="background-image:url('static/characters/victor_misa.jpg');" href="https://victormisa.com"
-            target="_blank" class="button">Victor Misa</a>
-
-
-        <br><br>
-
-        <button onclick="closeCredits()">VOLVER</button>
-        <button onclick="share()">COMPARTIR</button>
-
-        <br><br>
-
-    </div>
-
 
     <audio id="music" loop>
         <source src="static/music.mp3" type="audio/mp3">
@@ -372,9 +323,8 @@
 
         var stages = [
 
-
             [
-                ['P', '', 'I', ''],
+                ['P', '', 'I', 'R'],
                 ['', '', 'S', ''],
                 ['', '', 'S', ''],
                 ['', '', 'S', 'D'],
@@ -385,29 +335,29 @@
             [
                 ['', 'I', '', ''],
                 ['', '', '', 'S'],
-                ['S', '', 'I', ''],
+                ['S', 'R', 'I', 'S'],
                 ['S', '', 'P', 'D']
             ],
 
             [
                 ['I', '', 'D', ''],
-                ['S', 'I', '', ''],
-                ['', '', '', 'S'],
+                ['S', 'I', 'R', 'I'],
+                ['S', '', '', 'S'],
                 ['S', 'I', 'P', ''],
             ],
 
             [
-                ['I', '', '', 'I'],
-                ['S', '', '', 'I'],
-                ['S', 'I', '', ''],
+                ['I', 'R', 'R', 'I'],
+                ['S', '', '', 'S'],
+                ['S', '', 'I', 'R'],
                 ['S', '', 'P', 'D'],
             ],
 
             [
-                ['I', '', 'D', ''],
-                ['I', '', 'I', 'S'],
-                ['S', 'I', '', ''],
-                ['I', '', 'P', 'S'],
+                ['I', 'D', 'R', 'I'],
+                ['I', 'S', 'I', 'S'],
+                ['R', 'S', 'I', 'P'],
+                ['I', 'S', 'R', 'S'],
             ]
 
 
@@ -462,6 +412,8 @@
 
                     } else if (row_value == 'E') {
                         class_name = 'enemy';
+                    } else if (row_value == 'R') {
+                        class_name = 'rock';
                     } else if (row_value == 'P') {
                         class_name = 'player';
                         player_row = row;
@@ -896,6 +848,12 @@
         function moveLeft() {
             if (player_col > 0) {
 
+
+                if (player_col && stages[current_stage - 1][player_row][player_col - 1] == 'R') {
+                    return;
+                }
+
+
                 if (is_moving) return;
                 is_moving = true;
 
@@ -907,6 +865,11 @@
         function moveRight() {
 
             if (player_col < (max_col - 1)) {
+
+
+                if (stages[current_stage - 1][player_row][player_col + 1] == 'R') {
+                    return;
+                }
 
 
                 if (is_moving) return;
