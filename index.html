@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>🔥 OVH On Fire #ovhonfire 🔥</title>
+    <title>🔥 OVH On Fire - El videojuego 🔥</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -17,10 +17,8 @@
 
     <link rel="prefetch" href="static/music.mp3" />
     <link rel="prefetch" href="static/item.mp3" />
-    <link rel="prefetch" href="static/ded.mp3" />
     <link rel="prefetch" href="static/door.mp3" />
     <link rel="prefetch" href="static/player.png" />
-    <link rel="prefetch" href="static/enemy6.jpg" />
     <link rel="prefetch" href="static/item.gif" />
     <link rel="prefetch" href="static/floor.png" />
     <link rel="prefetch" href="static/door_closed.png" />
@@ -30,13 +28,13 @@
 
 
 
-    <meta property="og:image" content="https://vivirenremoto.github.io/chuiso_excel_juego/static/social.png">
-    <meta property="og:image:secure_url" content="https://vivirenremoto.github.io/chuiso_excel_juego/static/social.png">
-    <meta property="og:image:alt" content="Chuiso y el Excel Legendario - El videojuego">
+    <meta property="og:image" content="https://vivirenremoto.github.io/ovhonfire/static/social.png">
+    <meta property="og:image:secure_url" content="https://vivirenremoto.github.io/ovhonfire/static/social.png">
+    <meta property="og:image:alt" content="OVH On Fire - El videojuego">
     <meta property="og:image:type" content="image/png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Chuiso y el Excel Legendario - El videojuego">
-    <meta name="twitter:image" content="https://vivirenremoto.github.io/chuiso_excel_juego/static/social.png">
+    <meta name="twitter:title" content="OVH On Fire - El videojuego">
+    <meta name="twitter:image" content="https://vivirenremoto.github.io/ovhonfire/static/social.png">
 
 
 </head>
@@ -767,6 +765,7 @@
 
 
                 if ($('.item:visible').length == 0) {
+                    sound_door.play();
 
                     got_item = true;
 
@@ -776,7 +775,6 @@
 
 
 
-                sound_door.play();
 
 
 

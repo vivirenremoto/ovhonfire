@@ -1,7 +1,7 @@
-# Chuiso y el Excel Legendario - El videojuego
+# OVH On Fire - El videojuego
  
-[Web - Juego](https://vivirenremoto.github.io/chuiso_excel_juego/)
+[Web - Juego](https://vivirenremoto.github.io/ovhonfire/)
 
 [Autor](https://twitter.com/vivirenremoto)
 
-![Chuiso y el Excel Legendario - El videojuego](https://vivirenremoto.github.io/chuiso_excel_juego/static/social.png)
+![OVH On Fire - El videojuego](https://vivirenremoto.github.io/ovhonfire/static/social.png)
