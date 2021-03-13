@@ -165,7 +165,7 @@
             border-radius: 5px;
             cursor: pointer;
             text-transform: uppercase;
-            width: 250px;
+            width: 290px;
             margin: auto;
             margin-bottom: 15px;
         }
@@ -242,6 +242,7 @@
         <br><br>
 
 
+        <button onclick="open_hosting()">¿BUSCAS HOSTING?</button>
         <button onclick="share();">COMPARTIR</button>
         <button onclick="location.reload()">¿REPETIR?</button>
 
@@ -325,23 +326,21 @@
 
             [
                 ['P', '', 'I', 'R'],
-                ['', '', 'S', ''],
-                ['', '', 'S', ''],
+                ['S', '', 'S', ''],
+                ['R', '', 'S', ''],
                 ['', '', 'S', 'D'],
             ],
 
-
-
             [
-                ['', 'I', '', ''],
-                ['', '', '', 'S'],
+                ['R', 'I', '', ''],
+                ['S', '', '', 'S'],
                 ['S', 'R', 'I', 'S'],
                 ['S', '', 'P', 'D']
             ],
 
             [
-                ['I', '', 'D', ''],
-                ['S', 'I', 'R', 'I'],
+                ['I', '', 'D', 'R'],
+                ['S', 'R', 'I', 'S'],
                 ['S', '', '', 'S'],
                 ['S', 'I', 'P', ''],
             ],
@@ -359,7 +358,6 @@
                 ['R', 'S', 'I', 'P'],
                 ['I', 'S', 'R', 'S'],
             ]
-
 
         ];
 
@@ -882,6 +880,12 @@
         function moveUp() {
             if (stage[player_row][player_col] == 'S' && player_row > 0) {
 
+
+                if (stages[current_stage - 1][player_row - 1][player_col] == 'R') {
+                    return;
+                }
+
+
                 if (is_moving) return;
                 is_moving = true;
 
@@ -892,6 +896,11 @@
 
         function moveDown() {
             if (player_row < (max_row - 1) && stage[player_row + 1][player_col] == 'S') {
+
+
+                if (stages[current_stage - 1][player_row + 1][player_col] == 'R') {
+                    return;
+                }
 
                 if (is_moving) return;
                 is_moving = true;
@@ -919,6 +928,9 @@
         }
 
 
+        function open_hosting() {
+            window.open('http://bit.ly/raiolaonfire');
+        }
 
 
 
